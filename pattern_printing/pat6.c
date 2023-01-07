@@ -1,6 +1,9 @@
 #include<stdio.h>
 int main(){
-	int n=4,temp1,temp2;
+//	int n=4;
+	int n;
+	scanf("%d",&n);
+	int temp1,temp2;
 	for (int i=0;i<n;i++){
 		for (int j=0;j<n-i-1;j++)
 			printf(" ");

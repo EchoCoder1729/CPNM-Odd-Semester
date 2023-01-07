@@ -1,23 +1,30 @@
 #include<stdio.h>
 int main(){
-//	int n;
-//	scanf("%d",&n);
-	int n=4;
-	int a=1;
+	int n,temp1,temp2;
+	scanf("%d",&n);
+//	int n=4;
 	for (int i=1;i<=n;i++){
 		for (int j=1;j<=n-i;j++)
 			printf(" ");
-		printf("%d",a*a);
-		a=a*10+1;
+		for (int k=1;k<=i;k++){
+			printf("%d",k);
+			temp1=k;
+		}
+		for (int l=temp1-1;l>0;l--)
+			printf("%d",l);
 	printf("\n");
 	}
-	a/=100;
 	for (int i=n-1;i>0;i--){
-		for (int j=1;j<=n-i;j++)
+		for(int j=n-i;j>0;j--)
 			printf(" ");
-		printf("%d",a*a);
-		a/=10;
+		for (int k=1;k<=i;k++){
+			printf("%d",k);
+			temp2=k;
+		}
+		for (int l=temp2-1;l>0;l--)
+			printf("%d",l);
 	printf("\n");
 	}
+	
 	return 0;
 }

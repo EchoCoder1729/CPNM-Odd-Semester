@@ -6,12 +6,12 @@ int main()
     int n;
     scanf("%d",&n);
     int a=n, b=n;
-    for (int i=0;i<n+1;i++){
+    for (int i=0;i<n;i++){
         for (int j=0;j<2*n+1;j++){
-            if (j>a && j<b)
-                printf(" ");
-            else
+            if (j==a || j==b)
                 printf("+");
+            else
+                printf(" ");
         }
         a-=1;
         b+=1;
@@ -19,12 +19,14 @@ int main()
     }
     a++;
     b--;
-    for (int i=0;i<n+1;i++){
+    a++;
+    b--;
+    for (int i=1;i<n;i++){
         for (int j=0;j<2*n+1;j++){
-            if (j>a && j<b)
-                printf(" ");
-            else
+            if (j==a || j==b)
                 printf("+");
+            else
+                printf(" ");
         }
         a+=1;
         b-=1;

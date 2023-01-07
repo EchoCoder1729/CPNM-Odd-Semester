@@ -1,6 +1,8 @@
 #include<stdio.h>
 int main(){
-	int n=4;
+//	int n=4;
+	int n;
+	scanf("%d",&n);
 	int j=n+1;
 	while (j>0){
 		for (int i=0;i<j;i++)

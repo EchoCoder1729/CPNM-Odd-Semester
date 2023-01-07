@@ -1,7 +1,10 @@
 #include<stdio.h>
 int main(){
 	int temp1,temp2;
-	int n=4;
+	int n;
+	scanf("%d",&n);
+//	int n=4;
+	n=n+1;
 	int m=1+(n-2)*2;
 	for (int i=1;i<=m;i++){
 		for (int j=1;j<=m-i;j++)
