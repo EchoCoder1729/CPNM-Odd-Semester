@@ -27,14 +27,28 @@ int main(){
 			}
 		}
 		for (int j=0;j<10;j++){
-			if (max>a[i][j] & a[i][j]>submax){
+			if (max>a[i][j] && a[i][j]>submax){
 				submax=a[i][j];
 				printf("%d",a[i][j]);
 				subtop_index=j;
 			}
 		}
-		printf("Highest marks in subject %d is received by %d (marks %d)\n",i,a[0][top_index],max);
-		printf("Second highest marks in subject %d is received by %d (marks %d)\n",i,a[0][subtop_index],submax);
+		printf("Highest marks in subject %d is received by ",i);
+		for (int j=0;j<10;j++){
+			if (a[i][j]==max){
+				printf("%d ",a[0][j]);
+			}
+		}
+		printf("\n");
+		printf("Second highest marks in subject %d is received by ",i);
+		for (int j=0;j<10;j++){
+			if (a[i][j]==submax){
+				printf("%d ",a[0][j]);
+			}
+		}
+		printf("\n");
+//		printf("Highest marks in subject %d is received by %d (marks %d)\n",i,a[0][top_index],max);
+//		printf("Second highest marks in subject %d is received by %d (marks %d)\n",i,a[0][subtop_index],submax);
 	}
 	return 0;
 }
